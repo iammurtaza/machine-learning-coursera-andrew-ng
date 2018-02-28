@@ -19,11 +19,12 @@ grad = zeros(size(theta));
 
 hth =X*theta;
 shth = sigmoid(hth);
+
 J= (1/m)*sum( (-y)'*log(shth) - (1-y)'*log(1-shth)) + (lambda/(2*m))*sum(theta(2:length(theta)).^2);
 
 grad=(1/m)*sum(X.*repmat(shth - y, 1, n));
 
-grad(:,2:length(grad)) = grad(:,2:length(grad)) + (lambda/m)*theta(2:length(theta))';
+grad(:,2:end) = grad(:,2:end) + (lambda/m)*theta(2:end)';
 
 
 % =============================================================
