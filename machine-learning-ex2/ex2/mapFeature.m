@@ -1,7 +1,7 @@
 function out = mapFeature(X1, X2)
 % MAPFEATURE Feature mapping function to polynomial features
 %
-%   MAPFEATURE(X1, X2) maps the two input features
+%   MAPFEATURE(X1, X2) maps the 2 input features
 %   to quadratic features used in the regularization exercise.
 %
 %   Returns a new feature array with more features, comprising of 
